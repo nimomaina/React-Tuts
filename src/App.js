@@ -36,6 +36,14 @@ class App extends Component {
     })
   }
 
+  //method called when the component is first mounted to the DOM
+  componentDidMount() {
+    console.log('component mounted')
+  }
+  //fires when we get a change of state/props
+  componentDidUpdate(prevProps, prevState){
+    console.log('component update:', prevState)
+  }
   render() {
     return (
       <div className="App">

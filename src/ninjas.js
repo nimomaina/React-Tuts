@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './ninja.css'
 //Ui component
 //doesn't have its own state
 //we can pass in the functional components props as parameters

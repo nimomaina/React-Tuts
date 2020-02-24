@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAA;EAEA,UAAU,EAAE,MAAM;CACrB",
+    "sources": [
+        "ninja.scss"
+    ],
+    "names": [],
+    "file": "ninja.css"
+}
