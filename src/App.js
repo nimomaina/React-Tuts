@@ -24,6 +24,9 @@ class App extends Component {
       ninjas: ninjas
     })
   }
+
+  //again we dont want to mutate the original array
+  //we filter the data to return the ninjas that dont have id of what we pass in using the delete function in component Tutorial
   deleteNinja = (id) => {
     let ninjas = this.state.ninjas.filter(ninja => {
       return ninja.id !== id
