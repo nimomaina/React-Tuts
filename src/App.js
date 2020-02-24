@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tutorial from './ninjas';
+import AddNinja from './AddNinja';
 
 //container component.
 //has its own state
@@ -16,6 +17,7 @@ render() {
     <div className="App">
       <h1>Nesting Components tutorial</h1>
       <Tutorial ninjas = {this.state.ninjas}/>
+      <AddNinja />
     </div>
   );
 }
