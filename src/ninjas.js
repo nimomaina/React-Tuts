@@ -1,15 +1,23 @@
-import React, {Component} from  'react';
+import React, { Component } from 'react';
 
-class Tutorial extends Component{
+class Tutorial extends Component {
     render() {
-        const { name, age, company }= this.props;
+        const { ninjas } = this.props;
+        const ninjaList = ninjas.map(ninja => {
+            return (
+                <div className="ninja" key={ninja.id}>
+                    <div>Name: {ninja.name}</div>
+                    <div>Age: {ninja.age}</div>
+                    <div>Company: {ninja.company}</div>
+                </div>
+            )
+        });
         return(
-            <div className="ninja-tutorial">
-                <div>Name: {name}</div>
-                <div>Age: {age}</div>
-                <div>Company: {company}</div>
+            <div className="ninja-list">
+                {ninjaList}
             </div>
         )
+     
     }
 }
 
