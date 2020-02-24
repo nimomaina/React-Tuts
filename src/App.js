@@ -7,7 +7,8 @@ class App extends Component {
   state = {
     ninjas: [
       {name:"Nimo Maina", age:"30", company:"Jenga", id:1},
-      {name:"Nim", age:"30", company:"Jenga", id:2}
+      {name:"Nimz", age:"15", company:"Kwara", id:2},
+      {name:"Nim", age:"25", company:"Jenga", id:3}
   ]
 }
 render() {
