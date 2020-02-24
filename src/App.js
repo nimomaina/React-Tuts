@@ -12,14 +12,22 @@ class App extends Component {
       { name: "Nim", age: "25", company: "Jenga", id: 3 }
     ]
   }
-//this is the function we using as props to pass to the child component AddNinja
-// we generate an id to the ninja array passed in here using math.random to get random integrs as ID
-// we never want to change the original array
-//we use the spread operator to get all the properties of the original array and add the ones we have
-//it will spread over the index and values
+  //this is the function we using as props to pass to the child component AddNinja
+  // we generate an id to the ninja array passed in here using math.random to get random integrs as ID
+  // we never want to change the original array
+  //we use the spread operator to get all the properties of the original array and add the ones we have
+  //it will spread over the index and values
   addNinja = (ninja) => {
     ninja.id = Math.random();
     let ninjas = [...this.state.ninjas, ninja]
+    this.setState({
+      ninjas: ninjas
+    })
+  }
+  deleteNinja = (id) => {
+    let ninjas = this.state.ninjas.filter(ninja => {
+      return ninja.id !== id
+    })
     this.setState({
       ninjas: ninjas
     })
@@ -29,7 +37,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Nesting Components tutorial</h1>
-        <Tutorial ninjas={this.state.ninjas} />
+        <Tutorial ninjas={this.state.ninjas} deleteNinja={this.deleteNinja} />
         <AddNinja addNinja={this.addNinja} />
       </div>
     );
